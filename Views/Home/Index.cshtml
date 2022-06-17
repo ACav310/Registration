@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model User
+
+<div class="mt-5 text-center">
+    <h1 class="display-4">🧙 Register to join the Battle 🧌</h1>
+</div>
+<div class="w-50 bg-light p-2 mx-auto border rounded mt-5" >
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h4><span class="text-primary">Create new Account:</span> </h4>
+        </div>
+        <div>
+            <a href="/login">Already a User?</a>
+        </div>
+    </div>
+        <form action="/user/register" method="post">
+            <div class="row">
+                <div class="col">
+                    <input asp-for="FirstName"  class="form-control" placeholder="First name">
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <input asp-for="LastName"  class="form-control" placeholder="Last name">
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                    
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <input asp-for="Email"  class="form-control" placeholder="Email address">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <input type="submit" value="Register" class="btn btn-primary w-100">
+                </div>
+            </div>
+            <div class="mt-2 row">
+                <div class="col">
+                    <input asp-for="Password" class="form-control" placeholder="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <input asp-for="PassConfirm" class="form-control" placeholder="Confirm Password">
+                    <span asp-validation-for="PassConfirm" class="text-danger"></span>
+                </div>
+            </div>
+        </form>
+</div>

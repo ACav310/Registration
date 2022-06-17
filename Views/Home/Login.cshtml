@@ -1,0 +1,32 @@
+@model Login
+
+<div class="mt-5 text-center">
+    <h1 class="display-4">⚔️ Return to Battle ⚔️</h1>
+</div>
+<div class="w-25 bg-light p-2 mx-auto border rounded mt-5" >
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <h4><span class="text-primary">Login:</span> </h4>
+        </div>
+        <div>
+            <a href="/">Need to Enlist?</a>
+        </div>
+    </div>
+        <form action="/user/login" method="post">
+            <div class="row mt-2">
+                <div class="col">
+                    <input asp-for="LEmail"  class="form-control" placeholder="Email address">
+                    <span asp-validation-for="LEmail" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="mt-2 row">
+                <div class="col">
+                    <input asp-for="LPassword" class="form-control" placeholder="Password">
+                    <span asp-validation-for="LPassword" class="text-danger"></span>
+                </div>
+                <div class="col">
+                    <input type="submit" value="Login" class="btn btn-primary w-100">
+                </div>
+            </div>
+        </form>
+</div>
